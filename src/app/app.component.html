@@ -1,0 +1,15 @@
+<div class='topbar'>
+    <div class='title'>{{title}}</div>
+    <div class='topline'>
+        <div class='leftline'></div>
+        <div class='middleline'></div>
+        <div class='rightline'></div>
+    </div>
+</div>
+<div class='body'>
+    <div class='subtitle'>Today</div>
+    <div class='item' *ngFor="let item of items">
+        <div class='priority level-{{item.priority}}'>{{item.id}}</div>
+        <div class='todo'>{{item.todo}}</div>
+    </div>
+</div>
