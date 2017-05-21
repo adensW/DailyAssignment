@@ -14,6 +14,7 @@ var AppComponent = (function () {
     function AppComponent(itemService) {
         this.itemService = itemService;
         this.title = 'ToDoList';
+        this.clickMessage = '';
     }
     AppComponent.prototype.getItems = function () {
         var _this = this;
@@ -21,6 +22,9 @@ var AppComponent = (function () {
     };
     AppComponent.prototype.ngOnInit = function () {
         this.getItems();
+    };
+    AppComponent.prototype.addTask = function () {
+        this.clickMessage = 'You are my hero!';
     };
     return AppComponent;
 }());

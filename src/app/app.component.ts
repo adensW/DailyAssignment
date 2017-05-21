@@ -19,4 +19,8 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.getItems();
   }
+  clickMessage = '';
+  addTask():void{
+     this.clickMessage = 'You are my hero!';
+  }
 }
