@@ -23,13 +23,10 @@ export class AppComponent implements OnInit {
   tempitem = new Item;
   
   addTask():void{
-     
-     
-
-     this.tempitem.id=11;
-     this.tempitem.priority=2;
-     this.tempitem.todo='test';
-     this.clickMessage = JSON.stringify(this.tempitem);
-    //  this.items.push(this.tempitem);
+    //  this.tempitem.id=11;
+    //  this.tempitem.priority=2;
+    //  this.tempitem.todo='test';
+    this.clickMessage = JSON.stringify(this.tempitem);
+    this.items.push(this.tempitem);
   }
 }

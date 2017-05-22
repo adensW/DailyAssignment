@@ -26,11 +26,11 @@ var AppComponent = (function () {
         this.getItems();
     };
     AppComponent.prototype.addTask = function () {
-        this.tempitem.id = 11;
-        this.tempitem.priority = 2;
-        this.tempitem.todo = 'test';
+        //  this.tempitem.id=11;
+        //  this.tempitem.priority=2;
+        //  this.tempitem.todo='test';
         this.clickMessage = JSON.stringify(this.tempitem);
-        //  this.items.push(this.tempitem);
+        this.items.push(this.tempitem);
     };
     return AppComponent;
 }());
