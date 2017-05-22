@@ -9,12 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var item_1 = require("./item");
 var item_service_1 = require("./item.service");
 var AppComponent = (function () {
     function AppComponent(itemService) {
         this.itemService = itemService;
         this.title = 'ToDoList';
         this.clickMessage = '';
+        this.tempitem = new item_1.Item;
     }
     AppComponent.prototype.getItems = function () {
         var _this = this;
@@ -24,7 +26,11 @@ var AppComponent = (function () {
         this.getItems();
     };
     AppComponent.prototype.addTask = function () {
-        this.clickMessage = 'You are my hero!';
+        this.tempitem.id = 11;
+        this.tempitem.priority = 2;
+        this.tempitem.todo = 'test';
+        this.clickMessage = JSON.stringify(this.tempitem);
+        //  this.items.push(this.tempitem);
     };
     return AppComponent;
 }());

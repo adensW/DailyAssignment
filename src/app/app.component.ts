@@ -20,7 +20,16 @@ export class AppComponent implements OnInit {
     this.getItems();
   }
   clickMessage = '';
+  tempitem = new Item;
+  
   addTask():void{
-     this.clickMessage = 'You are my hero!';
+     
+     
+
+     this.tempitem.id=11;
+     this.tempitem.priority=2;
+     this.tempitem.todo='test';
+     this.clickMessage = JSON.stringify(this.tempitem);
+    //  this.items.push(this.tempitem);
   }
 }
