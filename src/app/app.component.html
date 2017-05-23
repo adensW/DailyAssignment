@@ -12,19 +12,10 @@
         <div class='priority level-{{item.priority}}'>{{item.id}}</div>
         <div class='todo'>{{item.todo}}</div>
     </div>
-    <form>
-        <div>
-            <label for="id"> id:</label>
-            <input type="text" id='id' [(ngModel)]="tempitem.id" name='id' />
-        </div>
-        <div>
-            <label for='todo'> todo:</label>
-            <input type="text" id="todo" [(ngModel)]="tempitem.todo" name="todo" />
-        </div>
-        <div class='buttom'>
-            <button (click)='addTask()'>添加任务</button>
-            <span>{{clickMessage}}</span>
-        </div>
-    </form>
-
+    <div [hidden]='added'>
+        <add-task></add-task>
+    </div>
+    <div class='buttom' [hidden]='!added'>
+        <button (click)='addTask()'>添加任务</button>
+    </div>
 </div>

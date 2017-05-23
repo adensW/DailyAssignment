@@ -7,4 +7,7 @@ export class ItemService{
     getItems():Promise<Item[]>{
         return Promise.resolve(ITEMS);
     }
+    setItem(item:Item):void{
+        ITEMS.push(item);
+    }
 }

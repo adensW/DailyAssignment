@@ -9,32 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var item_1 = require("./item");
 var item_service_1 = require("./item.service");
-var AppComponent = (function () {
-    function AppComponent(itemService) {
+var addtaskComponent = (function () {
+    function addtaskComponent(itemService) {
         this.itemService = itemService;
-        this.title = 'ToDoList';
-        this.added = true;
+        this.tempitem = new item_1.Item;
+        this.clickMessage = '';
     }
-    AppComponent.prototype.getItems = function () {
-        var _this = this;
-        this.itemService.getItems().then(function (Items) { return _this.items = Items; });
+    addtaskComponent.prototype.add = function () {
+        this.itemService.setItem(this.tempitem);
+        this.clickMessage = JSON.stringify(this.tempitem);
     };
-    AppComponent.prototype.ngOnInit = function () {
-        this.getItems();
-    };
-    AppComponent.prototype.addTask = function () {
-        this.added = false;
-    };
-    return AppComponent;
+    return addtaskComponent;
 }());
-AppComponent = __decorate([
+addtaskComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        templateUrl: './app.component.html',
-        styleUrls: ['./app.component.css']
+        selector: 'add-task',
+        templateUrl: './addtask.component.html'
     }),
     __metadata("design:paramtypes", [item_service_1.ItemService])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], addtaskComponent);
+exports.addtaskComponent = addtaskComponent;
+//# sourceMappingURL=addtask.component.js.map

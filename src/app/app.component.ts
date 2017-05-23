@@ -9,6 +9,7 @@ import {ItemService} from './item.service';
 export class AppComponent implements OnInit {
   title = 'ToDoList';
   items :Item[];
+  added=true;
   constructor(
     private itemService:ItemService
   ){}
@@ -19,14 +20,12 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.getItems();
   }
-  clickMessage = '';
-  tempitem = new Item;
+ 
+ 
   
   addTask():void{
-    //  this.tempitem.id=11;
-    //  this.tempitem.priority=2;
-    //  this.tempitem.todo='test';
-    this.clickMessage = JSON.stringify(this.tempitem);
-    this.items.push(this.tempitem);
+    
+    this.added=false;
+   
   }
 }

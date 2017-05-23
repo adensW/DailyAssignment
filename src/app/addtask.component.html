@@ -1,0 +1,16 @@
+<form>
+    <div>
+        <label for="id"> id:</label>
+        <input type="text" id='id' [(ngModel)]="tempitem.id" name='id' />
+    </div>
+    <div>
+        <label for='todo'> todo:</label>
+        <input type="text" id="todo" [(ngModel)]="tempitem.todo" name="todo" />
+    </div>
+    <div>
+        <label for='priority'>priority:</label>
+        <input type="text" id='priority' [(ngModel)]="tempitem.priority" name="priority" />
+    </div>
+    <button (click)='add()'>确认添加</button>
+    <span>{{clickMessage}}</span>
+</form>

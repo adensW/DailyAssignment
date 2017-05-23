@@ -10,6 +10,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
 var item_service_1 = require("./item.service");
+var addtask_component_1 = require("./addtask.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -20,7 +21,9 @@ AppModule = __decorate([
         imports: [platform_browser_1.BrowserModule,
             forms_1.FormsModule
         ],
-        declarations: [app_component_1.AppComponent],
+        declarations: [app_component_1.AppComponent,
+            addtask_component_1.addtaskComponent
+        ],
         providers: [item_service_1.ItemService],
         bootstrap: [app_component_1.AppComponent]
     })
