@@ -14,7 +14,6 @@ var AppComponent = (function () {
     function AppComponent(itemService) {
         this.itemService = itemService;
         this.title = 'ToDoList';
-        this.added = true;
     }
     AppComponent.prototype.getItems = function () {
         var _this = this;
@@ -24,6 +23,9 @@ var AppComponent = (function () {
         this.getItems();
     };
     AppComponent.prototype.addTask = function () {
+        this.added = true;
+    };
+    AppComponent.prototype.addtaskComplete = function () {
         this.added = false;
     };
     return AppComponent;

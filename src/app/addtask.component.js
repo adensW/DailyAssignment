@@ -11,13 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var item_1 = require("./item");
 var item_service_1 = require("./item.service");
+var app_component_1 = require("./app.component");
 var addtaskComponent = (function () {
-    function addtaskComponent(itemService) {
+    function addtaskComponent(itemService, appcomponent) {
         this.itemService = itemService;
+        this.appcomponent = appcomponent;
         this.tempitem = new item_1.Item;
         this.clickMessage = '';
     }
     addtaskComponent.prototype.add = function () {
+        this.appcomponent.addtaskComplete();
         this.itemService.setItem(this.tempitem);
         this.clickMessage = JSON.stringify(this.tempitem);
     };
@@ -28,7 +31,8 @@ addtaskComponent = __decorate([
         selector: 'add-task',
         templateUrl: './addtask.component.html'
     }),
-    __metadata("design:paramtypes", [item_service_1.ItemService])
+    __metadata("design:paramtypes", [item_service_1.ItemService,
+        app_component_1.AppComponent])
 ], addtaskComponent);
 exports.addtaskComponent = addtaskComponent;
 //# sourceMappingURL=addtask.component.js.map

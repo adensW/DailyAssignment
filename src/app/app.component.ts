@@ -9,7 +9,7 @@ import {ItemService} from './item.service';
 export class AppComponent implements OnInit {
   title = 'ToDoList';
   items :Item[];
-  added=true;
+  added:boolean;
   constructor(
     private itemService:ItemService
   ){}
@@ -20,12 +20,10 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.getItems();
   }
- 
- 
-  
-  addTask():void{
-    
+  addTask():void{    
+    this.added=true;
+  }
+  addtaskComplete():void{
     this.added=false;
-   
   }
 }

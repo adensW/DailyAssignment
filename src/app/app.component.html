@@ -12,10 +12,10 @@
         <div class='priority level-{{item.priority}}'>{{item.id}}</div>
         <div class='todo'>{{item.todo}}</div>
     </div>
-    <div [hidden]='added'>
+    <div *ngIf='added'>
         <add-task></add-task>
     </div>
-    <div class='buttom' [hidden]='!added'>
+    <div class='buttom' *ngIf='!added'>
         <button (click)='addTask()'>添加任务</button>
     </div>
 </div>
