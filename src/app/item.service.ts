@@ -10,4 +10,13 @@ export class ItemService{
     setItem(item:Item):void{
         ITEMS.push(item);
     }
+    deleteItem(item:Item):void{
+        
+        var tempITEMS = ITEMS;
+        for(var i =0;i<tempITEMS.length;i++){
+            if(tempITEMS[i]==item){
+                ITEMS.splice(i,1);
+            }
+        }
+    }
 }

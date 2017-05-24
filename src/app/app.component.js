@@ -28,6 +28,9 @@ var AppComponent = (function () {
     AppComponent.prototype.addtaskComplete = function () {
         this.added = false;
     };
+    AppComponent.prototype.deleteItem = function (item) {
+        this.itemService.deleteItem(item);
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([

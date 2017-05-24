@@ -26,4 +26,7 @@ export class AppComponent implements OnInit {
   addtaskComplete():void{
     this.added=false;
   }
+  deleteItem(item:Item):void{
+    this.itemService.deleteItem(item);
+  }
 }

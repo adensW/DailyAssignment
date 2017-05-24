@@ -16,6 +16,14 @@ var ItemService = (function () {
     ItemService.prototype.setItem = function (item) {
         mock_items_1.ITEMS.push(item);
     };
+    ItemService.prototype.deleteItem = function (item) {
+        var tempITEMS = mock_items_1.ITEMS;
+        for (var i = 0; i < tempITEMS.length; i++) {
+            if (tempITEMS[i] == item) {
+                mock_items_1.ITEMS.splice(i, 1);
+            }
+        }
+    };
     return ItemService;
 }());
 ItemService = __decorate([
