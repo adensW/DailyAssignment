@@ -62,7 +62,10 @@
     height: 48px;
 }
 
-.todo,
+.todoitem {
+    border: none;
+}
+
 .del {
     display: inline-block;
 }

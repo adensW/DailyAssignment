@@ -19,4 +19,7 @@ export class ItemService{
             }
         }
     }
+    cancelItem():void{
+        ITEMS.pop();
+    }
 }

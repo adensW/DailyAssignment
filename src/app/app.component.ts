@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   title = 'ToDoList';
   items :Item[];
   added:boolean;
+  testMessage='';
   constructor(
     private itemService:ItemService
   ){}
@@ -21,6 +22,8 @@ export class AppComponent implements OnInit {
     this.getItems();
   }
   addTask():void{    
+    // var item=new Item;
+    // this.itemService.setItem(item);
     this.added=true;
   }
   addtaskComplete():void{
@@ -28,5 +31,13 @@ export class AppComponent implements OnInit {
   }
   deleteItem(item:Item):void{
     this.itemService.deleteItem(item);
+  }
+  cancel():void{
+    this.added=false;
+  }
+  inputItem(event:HTMLInputElement){
+    // this.testMessage= (<HTMLInputElement>event.target).value;
+    // (<HTMLInputElement>event.target).readOnly=false;
+    event.readOnly=false;
   }
 }

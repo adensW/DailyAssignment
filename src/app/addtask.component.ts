@@ -4,7 +4,8 @@ import {ItemService} from './item.service';
 import{AppComponent} from './app.component';
 @Component({
     selector:'add-task',
-    templateUrl:'./addtask.component.html'
+    templateUrl:'./addtask.component.html',
+    styleUrls:['./addtask.component.css']
 })
 export class addtaskComponent{
     constructor(
@@ -18,5 +19,8 @@ export class addtaskComponent{
         this.appcomponent.addtaskComplete();
         this.itemService.setItem(this.tempitem);
         this.clickMessage=JSON.stringify(this.tempitem);
+ }
+ cancel():void{
+    this.appcomponent.cancel();
  }
 }

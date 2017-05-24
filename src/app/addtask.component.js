@@ -24,12 +24,16 @@ var addtaskComponent = (function () {
         this.itemService.setItem(this.tempitem);
         this.clickMessage = JSON.stringify(this.tempitem);
     };
+    addtaskComponent.prototype.cancel = function () {
+        this.appcomponent.cancel();
+    };
     return addtaskComponent;
 }());
 addtaskComponent = __decorate([
     core_1.Component({
         selector: 'add-task',
-        templateUrl: './addtask.component.html'
+        templateUrl: './addtask.component.html',
+        styleUrls: ['./addtask.component.css']
     }),
     __metadata("design:paramtypes", [item_service_1.ItemService,
         app_component_1.AppComponent])

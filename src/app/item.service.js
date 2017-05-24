@@ -24,6 +24,9 @@ var ItemService = (function () {
             }
         }
     };
+    ItemService.prototype.cancelItem = function () {
+        mock_items_1.ITEMS.pop();
+    };
     return ItemService;
 }());
 ItemService = __decorate([

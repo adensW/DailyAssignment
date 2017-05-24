@@ -11,9 +11,10 @@
     <div class='item' *ngFor="let item of items">
         <div class='priority level-{{item.priority}}'>{{item.id}}</div>
         <!--<div class='todo'>{{item.todo}}</div>-->
-        <input [(ngModel)]='item.todo' name='todo' />
+        <input class='todoitem' [(ngModel)]='item.todo' name='todo' readOnly="true" #box (click)='inputItem(box);' />
         <div class='del' (click)='deleteItem(item)'>delete</div>
     </div>
+    {{testMessage}}
     <div *ngIf='added'>
         <add-task></add-task>
     </div>

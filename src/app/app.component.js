@@ -14,6 +14,7 @@ var AppComponent = (function () {
     function AppComponent(itemService) {
         this.itemService = itemService;
         this.title = 'ToDoList';
+        this.testMessage = '';
     }
     AppComponent.prototype.getItems = function () {
         var _this = this;
@@ -23,6 +24,8 @@ var AppComponent = (function () {
         this.getItems();
     };
     AppComponent.prototype.addTask = function () {
+        // var item=new Item;
+        // this.itemService.setItem(item);
         this.added = true;
     };
     AppComponent.prototype.addtaskComplete = function () {
@@ -30,6 +33,14 @@ var AppComponent = (function () {
     };
     AppComponent.prototype.deleteItem = function (item) {
         this.itemService.deleteItem(item);
+    };
+    AppComponent.prototype.cancel = function () {
+        this.added = false;
+    };
+    AppComponent.prototype.inputItem = function (event) {
+        // this.testMessage= (<HTMLInputElement>event.target).value;
+        // (<HTMLInputElement>event.target).readOnly=false;
+        event.readOnly = false;
     };
     return AppComponent;
 }());
