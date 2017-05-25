@@ -70,6 +70,7 @@
     height: 48px;
     line-height: 48px;
     vertical-align: top;
+    background-color: transparent;
 }
 
 .todo,
@@ -80,26 +81,40 @@
     vertical-align: top;
 }
 
-.level-1 {
+.priority_bg_1 {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    -o-filter: blur(5px);
+    filter: blur(10px);
+    filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false);
+    background-color: rgba(221, 44, 0, 0.2);
+}
+
+.priority_bg_2 {
+    background-color: rgba(221, 44, 0, 0.8);
+}
+
+.level_1 {
     background-color: #DD2C00;
 }
 
-.level-2 {
+.level_2 {
     background-color: #FD6801;
 }
 
-.level-3 {
+.level_3 {
     background-color: #FCFA00;
 }
 
-.level-4 {
+.level_4 {
     background-color: #00F4FE;
 }
 
-.level-5 {
+.level_5 {
     background-color: #00FD06;
 }
 
-.level-6 {
+.level_6 {
     background-color: #00FD06;
 }
