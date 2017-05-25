@@ -20,6 +20,9 @@ var addtaskComponent = (function () {
         this.clickMessage = '';
     }
     addtaskComponent.prototype.add = function () {
+        this.tempitem.id = 1;
+        this.tempitem.startTime = new Date();
+        this.tempitem.endTime = new Date(this.tempitem.endTime);
         this.appcomponent.addtaskComplete();
         this.itemService.setItem(this.tempitem);
         this.clickMessage = JSON.stringify(this.tempitem);

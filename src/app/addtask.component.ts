@@ -14,8 +14,12 @@ export class addtaskComponent{
     ){}
     items :Item[];
     tempitem = new Item;
+    
     clickMessage='';
     add():void{
+        this.tempitem.id=1;
+        this.tempitem.startTime=new Date();
+        this.tempitem.endTime=new Date(this.tempitem.endTime);
         this.appcomponent.addtaskComplete();
         this.itemService.setItem(this.tempitem);
         this.clickMessage=JSON.stringify(this.tempitem);
