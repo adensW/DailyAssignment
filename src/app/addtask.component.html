@@ -7,7 +7,11 @@
         <!--<label for='todo'> todo:</label>-->
         <input type="text" id="todo" [(ngModel)]="tempitem.todo" name="todo" placeholder="有件事一定要做" />
         <input type="datetime" id='endTime' [(ngModel)]="tempitem.endTime" name='endTime' placeholder="完成时间" />
-        <input type="text" id='priority' [(ngModel)]="tempitem.priority" name="priority" placeholder="优先级：1，2,3" />
+        <!--<input type="text" id='priority' [(ngModel)]="tempitem.priority" name="priority" placeholder="优先级：1，2,3" />-->
+        <select [(ngModel)]="tempitem.priority" name='priority'>
+            
+            <option *ngFor='let pri of priorities' [value]='pri'>{{pri}}</option>
+        </select>
     </div>
     <!--<div>
         <label for='priority'>priority:</label>

@@ -14,7 +14,7 @@ export class addtaskComponent{
     ){}
     items :Item[];
     tempitem = new Item;
-    
+    priorities=[1,2,3,4,5];
     clickMessage='';
     add():void{
         this.tempitem.id=1;

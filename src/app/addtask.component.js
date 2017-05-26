@@ -17,6 +17,7 @@ var addtaskComponent = (function () {
         this.itemService = itemService;
         this.appcomponent = appcomponent;
         this.tempitem = new item_1.Item;
+        this.priorities = [1, 2, 3, 4, 5];
         this.clickMessage = '';
     }
     addtaskComponent.prototype.add = function () {
