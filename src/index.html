@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Angular QuickStart</title>
     <base href="/">
     <meta charset="UTF-8">
@@ -14,12 +15,18 @@
     <script src="node_modules/systemjs/dist/system.src.js"></script>
 
     <script src="systemjs.config.js"></script>
-    <script>
-      System.import('main.js').catch(function(err){ console.error(err); });
-    </script>
-  </head>
 
-  <body>
-    <my-app>Loading AppComponent content here ...</my-app>
-  </body>
+    <script>
+        System.import('main.js').catch(function(err) {
+            console.error(err);
+        });
+    </script>
+</head>
+
+<body>
+    <div class='container'>
+        <my-app>Loading AppComponent content here ...</my-app>
+    </div>
+</body>
+
 </html>
