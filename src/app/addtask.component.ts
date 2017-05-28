@@ -1,7 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import {Item} from './item';
 import {ItemService} from './item.service';
-import{AppComponent} from './app.component';
+import {TodoListComponent} from './todolist.component';
 @Component({
     selector:'add-task',
     templateUrl:'./addtask.component.html',
@@ -10,7 +10,7 @@ import{AppComponent} from './app.component';
 export class addtaskComponent{
     constructor(
     private itemService:ItemService,
-    private appcomponent:AppComponent
+    private todoListComponent:TodoListComponent
     ){}
     items :Item[];
     tempitem = new Item;
@@ -20,11 +20,11 @@ export class addtaskComponent{
         this.tempitem.id=1;
         this.tempitem.startTime=new Date();
         this.tempitem.endTime=new Date(this.tempitem.endTime);
-        this.appcomponent.addtaskComplete();
+        this.todoListComponent.addtaskComplete();
         this.itemService.setItem(this.tempitem);
         this.clickMessage=JSON.stringify(this.tempitem);
  }
  cancel():void{
-    this.appcomponent.cancel();
+    this.todoListComponent.cancel();
  }
 }

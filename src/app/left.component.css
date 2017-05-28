@@ -1,0 +1,18 @@
+.left_container {
+    display: table;
+    width: 194px;
+}
+
+.box {
+    margin: 2px 2px 2px 2px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+}
+
+.box:hover {}
+
+.box_passed {
+    background-color: red;
+}

@@ -6,10 +6,13 @@ import{ItemService} from './item.service';
 import{addtaskComponent} from './addtask.component';
 import{StickyNoteComponent} from './stickynote.component';
 import{TodoListComponent} from './todolist.component';
+import{LeftComponent} from './left.component';
+import{LeftDayService} from './leftday.service';
 import {RouterModule,Routes} from '@angular/router';
 const appRoutes:Routes=[
   {path:'stickynote',component:StickyNoteComponent},
   {path:'todolist',component:TodoListComponent},
+  {path:'left',component:LeftComponent},
   { path: '',
     redirectTo: '/todolist',
     pathMatch: 'full'
@@ -24,8 +27,11 @@ const appRoutes:Routes=[
   addtaskComponent,
   TodoListComponent,
   StickyNoteComponent,
+  LeftComponent,
+  
   ],
-  providers:[ItemService],
+  providers:[ItemService,LeftDayService],
+  
   bootstrap:    [ AppComponent ],
  
 })
