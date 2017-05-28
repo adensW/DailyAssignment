@@ -1,14 +1,6 @@
-<div class='topbar'>
-    <div class='title'>{{title}}</div>
-    <div class='topline'>
-        <div class='leftline'></div>
-        <div class='middleline'></div>
-        <div class='rightline'></div>
-    </div>
-</div>
 <div class='body'>
     <div class='subtitle'>Today</div>
-    <div class='item ' *ngFor="let item of items">
+    <div class='item' *ngFor="let item of items">
         <div class='priority level_{{item.priority}}'></div>
         <input class='todoitem' [(ngModel)]='item.todo' name='todo' readOnly="true" #box (click)='inputItem(box);' />
         <div class='del' (click)='deleteItem(item)'>delete</div>

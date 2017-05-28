@@ -1,48 +1,28 @@
 import { Component,OnInit } from '@angular/core';
 import {Item} from './item';
 import {ItemService} from './item.service';
+import{Injectable} from '@angular/core';
 @Component({
   selector: 'my-app',
   template: `
+  <div class='topbar'>
+    <div class='title'>{{title}}</div>
+    <div class='topline'>
+        <div class='leftline'></div>
+        <div class='middleline'></div>
+        <div class='rightline'></div>
+    </div>
+</div>
     <nav>
       <a routerLink="/todolist" routerLinkActive="active">todolist</a>
       <a routerLink="/stickynote" routerLinkActive="active">stickynote</a>
+       <a routerLink="/left" routerLinkActive="active">Left</a>
     </nav>
     <router-outlet></router-outlet>
   `,
+  styleUrls:['./app.component.css'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'ToDoList';
-  items :Item[];
-  added:boolean;
-  testMessage='';
-  constructor(
-    private itemService:ItemService
-  ){}
-  
-  getItems():void{
-    this.itemService.getItems().then(Items=>this.items=Items)
-  }
-  ngOnInit(): void {
-    this.getItems();
-  }
-  addTask():void{    
-    // var item=new Item;
-    // this.itemService.setItem(item);
-    this.added=true;
-  }
-  addtaskComplete():void{
-    this.added=false;
-  }
-  deleteItem(item:Item):void{
-    this.itemService.deleteItem(item);
-  }
-  cancel():void{
-    this.added=false;
-  }
-  inputItem(event:HTMLInputElement){
-    // this.testMessage= (<HTMLInputElement>event.target).value;
-    // (<HTMLInputElement>event.target).readOnly=false;
-    event.readOnly=false;
-  }
+ 
 }

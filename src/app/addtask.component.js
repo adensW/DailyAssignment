@@ -11,11 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var item_1 = require("./item");
 var item_service_1 = require("./item.service");
-var app_component_1 = require("./app.component");
+var todolist_component_1 = require("./todolist.component");
 var addtaskComponent = (function () {
-    function addtaskComponent(itemService, appcomponent) {
+    function addtaskComponent(itemService, todoListComponent) {
         this.itemService = itemService;
-        this.appcomponent = appcomponent;
+        this.todoListComponent = todoListComponent;
         this.tempitem = new item_1.Item;
         this.priorities = [1, 2, 3, 4, 5];
         this.clickMessage = '';
@@ -24,12 +24,12 @@ var addtaskComponent = (function () {
         this.tempitem.id = 1;
         this.tempitem.startTime = new Date();
         this.tempitem.endTime = new Date(this.tempitem.endTime);
-        this.appcomponent.addtaskComplete();
+        this.todoListComponent.addtaskComplete();
         this.itemService.setItem(this.tempitem);
         this.clickMessage = JSON.stringify(this.tempitem);
     };
     addtaskComponent.prototype.cancel = function () {
-        this.appcomponent.cancel();
+        this.todoListComponent.cancel();
     };
     return addtaskComponent;
 }());
@@ -40,7 +40,7 @@ addtaskComponent = __decorate([
         styleUrls: ['./addtask.component.css']
     }),
     __metadata("design:paramtypes", [item_service_1.ItemService,
-        app_component_1.AppComponent])
+        todolist_component_1.TodoListComponent])
 ], addtaskComponent);
 exports.addtaskComponent = addtaskComponent;
 //# sourceMappingURL=addtask.component.js.map
