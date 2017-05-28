@@ -4,14 +4,29 @@ import { FormsModule }   from '@angular/forms';
 import { AppComponent }  from './app.component';
 import{ItemService} from './item.service';
 import{addtaskComponent} from './addtask.component';
+import{StickyNoteComponent} from './stickynote.component';
+import{TodoListComponent} from './todolist.component';
+import {RouterModule,Routes} from '@angular/router';
+const appRoutes:Routes=[
+  {path:'stickynote',component:StickyNoteComponent},
+  {path:'todolist',component:TodoListComponent},
+  { path: '',
+    redirectTo: '/todolist',
+    pathMatch: 'full'
+  },
+];
 @NgModule({
   imports:      [ BrowserModule,
-  FormsModule
+  FormsModule,
+  RouterModule.forRoot(appRoutes)
    ],
   declarations: [ AppComponent,
-  addtaskComponent
+  addtaskComponent,
+  TodoListComponent,
+  StickyNoteComponent,
   ],
   providers:[ItemService],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+ 
 })
 export class AppModule { }
