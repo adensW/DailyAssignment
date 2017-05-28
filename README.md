@@ -1,2 +1,2 @@
 # DailyAssignment
-Coding to Learning AngularJS
+Coding to Learn AngularJS
