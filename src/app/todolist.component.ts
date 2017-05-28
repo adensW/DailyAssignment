@@ -2,16 +2,11 @@ import { Component,OnInit } from '@angular/core';
 import {Item} from './item';
 import {ItemService} from './item.service';
 @Component({
-  selector: 'my-app',
-  template: `
-    <nav>
-      <a routerLink="/todolist" routerLinkActive="active">todolist</a>
-      <a routerLink="/stickynote" routerLinkActive="active">stickynote</a>
-    </nav>
-    <router-outlet></router-outlet>
-  `,
+  selector: 'todolist',
+  templateUrl:'./todolist.component.html' ,
+  styleUrls:['./todolist.component.css']
 })
-export class AppComponent implements OnInit {
+export class TodoListComponent implements OnInit {
   title = 'ToDoList';
   items :Item[];
   added:boolean;

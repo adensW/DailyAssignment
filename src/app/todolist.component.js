@@ -10,46 +10,47 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var item_service_1 = require("./item.service");
-var AppComponent = (function () {
-    function AppComponent(itemService) {
+var TodoListComponent = (function () {
+    function TodoListComponent(itemService) {
         this.itemService = itemService;
         this.title = 'ToDoList';
         this.testMessage = '';
     }
-    AppComponent.prototype.getItems = function () {
+    TodoListComponent.prototype.getItems = function () {
         var _this = this;
         this.itemService.getItems().then(function (Items) { return _this.items = Items; });
     };
-    AppComponent.prototype.ngOnInit = function () {
+    TodoListComponent.prototype.ngOnInit = function () {
         this.getItems();
     };
-    AppComponent.prototype.addTask = function () {
+    TodoListComponent.prototype.addTask = function () {
         // var item=new Item;
         // this.itemService.setItem(item);
         this.added = true;
     };
-    AppComponent.prototype.addtaskComplete = function () {
+    TodoListComponent.prototype.addtaskComplete = function () {
         this.added = false;
     };
-    AppComponent.prototype.deleteItem = function (item) {
+    TodoListComponent.prototype.deleteItem = function (item) {
         this.itemService.deleteItem(item);
     };
-    AppComponent.prototype.cancel = function () {
+    TodoListComponent.prototype.cancel = function () {
         this.added = false;
     };
-    AppComponent.prototype.inputItem = function (event) {
+    TodoListComponent.prototype.inputItem = function (event) {
         // this.testMessage= (<HTMLInputElement>event.target).value;
         // (<HTMLInputElement>event.target).readOnly=false;
         event.readOnly = false;
     };
-    return AppComponent;
+    return TodoListComponent;
 }());
-AppComponent = __decorate([
+TodoListComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        template: "\n    <nav>\n      <a routerLink=\"/todolist\" routerLinkActive=\"active\">todolist</a>\n      <a routerLink=\"/stickynote\" routerLinkActive=\"active\">stickynote</a>\n    </nav>\n    <router-outlet></router-outlet>\n  ",
+        selector: 'todolist',
+        templateUrl: './todolist.component.html',
+        styleUrls: ['./todolist.component.css']
     }),
     __metadata("design:paramtypes", [item_service_1.ItemService])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], TodoListComponent);
+exports.TodoListComponent = TodoListComponent;
+//# sourceMappingURL=todolist.component.js.map
