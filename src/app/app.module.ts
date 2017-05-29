@@ -1,6 +1,8 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
+import{HttpModule} from '@angular/http';
+
 import { AppComponent }  from './app.component';
 import{ItemService} from './item.service';
 import{addtaskComponent} from './addtask.component';
@@ -8,6 +10,7 @@ import{StickyNoteComponent} from './stickynote.component';
 import{TodoListComponent} from './todolist.component';
 import{LeftComponent} from './left.component';
 import{LeftDayService} from './leftday.service';
+
 import {RouterModule,Routes} from '@angular/router';
 const appRoutes:Routes=[
   {path:'stickynote',component:StickyNoteComponent},
@@ -19,9 +22,11 @@ const appRoutes:Routes=[
   },
 ];
 @NgModule({
-  imports:      [ BrowserModule,
-  FormsModule,
-  RouterModule.forRoot(appRoutes)
+  imports:      [
+     BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes),
+    HttpModule,
    ],
   declarations: [ AppComponent,
   addtaskComponent,
