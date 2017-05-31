@@ -15,7 +15,6 @@ import{Injectable} from '@angular/core';
 </div>
     <nav>
       <a routerLink="/todolist" routerLinkActive="active">todolist</a>
-      <a routerLink="/stickynote" routerLinkActive="active">stickynote</a>
        <a routerLink="/left" routerLinkActive="active">Left</a>
     </nav>
     <router-outlet></router-outlet>
