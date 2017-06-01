@@ -4,7 +4,7 @@ import {ItemService} from './item.service';
 import{Injectable} from '@angular/core';
 @Component({
   selector: 'my-app',
-  template: `
+  template: `<div class='container'>
   <div class='topbar'>
     <div class='title'>{{title}}</div>
     <div class='topline'>
@@ -18,6 +18,7 @@ import{Injectable} from '@angular/core';
        <a routerLink="/left" routerLinkActive="active">Left</a>
     </nav>
     <router-outlet></router-outlet>
+    </div>
   `,
   styleUrls:['./app.component.css'],
 })

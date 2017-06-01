@@ -5,8 +5,7 @@ import { Component } from '@angular/core';
    template:'<h1>StickyNote</h1>'
 })
 export class StickyNoteComponent{
-<<<<<<< HEAD
-    
-=======
->>>>>>> dev
+
+
+
 }

@@ -1,3 +1,12 @@
+.container {
+    text-align: center;
+}
+
+.title {
+    vertical-align: middle;
+    text-align: center;
+}
+
 .topbar {
     background-color: var(--color-blue);
     vertical-align: middle;
