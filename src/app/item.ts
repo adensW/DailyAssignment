@@ -3,5 +3,5 @@ export class Item{
     priority:number;
     todo:string;
     startTime:Date;
-    endTime:Date;
+    public endTime:Date;
 }

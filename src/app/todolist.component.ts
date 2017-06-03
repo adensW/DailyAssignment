@@ -20,7 +20,12 @@ export class TodoListComponent implements OnInit {
     this.itemService.getItems().then(Items=>this.items=Items)
   }
   ngOnInit(): void {
-    this.getItems();
+    
+  this.getItems();
+  for(var i =0;i<this.itemService.getItemsLength();i++){
+    this.testMessage = this.checkTimeover(this.itemService.getOneItem(i)).toString();
+  }
+  
   }
   addTask():void{    
     // var item=new Item;
@@ -40,5 +45,13 @@ export class TodoListComponent implements OnInit {
     // this.testMessage= (<HTMLInputElement>event.target).value;
     // (<HTMLInputElement>event.target).readOnly=false;
     event.readOnly=false;
+  }
+  checkTimeover(item:Item):boolean{
+    var now = new Date();
+    if(now>item.endTime){
+      return true;
+    }
+    return false;
+
   }
 }

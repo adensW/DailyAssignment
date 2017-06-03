@@ -22,4 +22,10 @@ export class ItemService{
     cancelItem():void{
         ITEMS.pop();
     }
+    getOneItem(index:number):Item{
+        return ITEMS[index];
+    }
+    getItemsLength():number{
+        return ITEMS.length;
+    }
 }

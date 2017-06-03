@@ -5,9 +5,9 @@
         <input class='todoitem' [(ngModel)]='item.todo' name='todo' readOnly="true" #box (click)='inputItem(box);' />
         <div class='del' (click)='deleteItem(item)'>delete</div>
         <!--<div class='priority_bg_{{item.priority}}'></div>-->
-        <!--<div class='todo'>{{item.startTime}}</div>-->
-        <!--<div class='todo'>{{item.endTime}}</div>-->
-        <!--<div class='todo'>{{item.endTime-item.startTime}}</div>-->
+        <!--<div class='todo'>{{item.startTime}}</div>
+        <div class='todo'>{{item.endTime}}</div>
+        <div class='todo'>{{item.endTime-item.startTime}}</div>-->
     </div>
 
     <div *ngIf='added'>

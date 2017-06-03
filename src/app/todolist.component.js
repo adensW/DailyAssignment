@@ -23,6 +23,9 @@ var TodoListComponent = (function () {
     };
     TodoListComponent.prototype.ngOnInit = function () {
         this.getItems();
+        for (var i = 0; i < this.itemService.getItemsLength(); i++) {
+            this.testMessage = this.checkTimeover(this.itemService.getOneItem(i)).toString();
+        }
     };
     TodoListComponent.prototype.addTask = function () {
         // var item=new Item;
@@ -42,6 +45,13 @@ var TodoListComponent = (function () {
         // this.testMessage= (<HTMLInputElement>event.target).value;
         // (<HTMLInputElement>event.target).readOnly=false;
         event.readOnly = false;
+    };
+    TodoListComponent.prototype.checkTimeover = function (item) {
+        var now = new Date();
+        if (now > item.endTime) {
+            return true;
+        }
+        return false;
     };
     return TodoListComponent;
 }());
