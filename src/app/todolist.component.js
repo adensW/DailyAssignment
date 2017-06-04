@@ -15,6 +15,7 @@ var TodoListComponent = (function () {
         this.itemService = itemService;
         this.title = 'ToDoList';
         this.testMessage = '';
+        this.errorMessage = '';
     }
     TodoListComponent.prototype.getItems = function () {
         var _this = this;
