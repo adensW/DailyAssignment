@@ -25,9 +25,16 @@ var addtaskComponent = (function () {
         this.tempitem.startTime = new Date();
         this.tempitem.endTime = new Date(this.tempitem.endTime);
         this.todoListComponent.addtaskComplete();
-        this.itemService.setItem(this.tempitem);
+        this.itemService.create(this.tempitem);
         this.clickMessage = JSON.stringify(this.tempitem);
     };
+    // add():void{
+    //     this.tempitem.id = 1;
+    //     this.tempitem.startTime = new Date();
+    //     this.tempitem.endTime = new Date(this.tempitem.endTime);
+    //     this.todoListComponent.addtaskComplete();
+    //     this.itemService.update(this.tempitem);
+    // }
     addtaskComponent.prototype.cancel = function () {
         this.todoListComponent.cancel();
     };

@@ -15,9 +15,9 @@ export class ItemService {
     // }
     getItems(): Promise<Item[]> {
         return this.http.get(this.url)
-               .toPromise()
-               .then(response => response.json().data as Item[])
-               .catch(this.handleError);
+            .toPromise()
+            .then(response => response.json().data as Item[])
+            .catch(this.handleError);
     }
 
     private extractData(res: Response) {
@@ -31,6 +31,22 @@ export class ItemService {
     }
     setItem(item: Item): void {
         ITEMS.push(item);
+    }
+    private headers = new Headers({ 'Content-Type': 'application/json' });
+    // update(item: Item): Promise<Item> {
+    //     const url = `${this.url}/${item.id}`;
+    //     return this.http
+    //         .put(url, JSON.stringify(item))
+    //         .toPromise()
+    //         .then(() => item)
+    //         .catch(this.handleError);
+    // }
+    create(item:Item): Promise<Item> {
+        return this.http
+            .post(this.url, JSON.stringify({ item: item }))
+            .toPromise()
+            .then(res => res.json().data as Item)
+            .catch(this.handleError);
     }
     deleteItem(item: Item): void {
 

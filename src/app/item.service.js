@@ -18,6 +18,7 @@ var ItemService = (function () {
         this.http = http;
         // private url = 'data/todolistdata.json'
         this.url = 'api/items';
+        this.headers = new Headers({ 'Content-Type': 'application/json' });
     }
     // getItems():Promise<Item[]>{
     //     return Promise.resolve(ITEMS);
@@ -38,6 +39,21 @@ var ItemService = (function () {
     };
     ItemService.prototype.setItem = function (item) {
         mock_items_1.ITEMS.push(item);
+    };
+    // update(item: Item): Promise<Item> {
+    //     const url = `${this.url}/${item.id}`;
+    //     return this.http
+    //         .put(url, JSON.stringify(item))
+    //         .toPromise()
+    //         .then(() => item)
+    //         .catch(this.handleError);
+    // }
+    ItemService.prototype.create = function (item) {
+        return this.http
+            .post(this.url, JSON.stringify({ item: item }))
+            .toPromise()
+            .then(function (res) { return res.json().data; })
+            .catch(this.handleError);
     };
     ItemService.prototype.deleteItem = function (item) {
         var tempITEMS = mock_items_1.ITEMS;
