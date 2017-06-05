@@ -32,7 +32,7 @@ export class ItemService {
     setItem(item: Item): void {
         ITEMS.push(item);
     }
-    private headers = new Headers({ 'Content-Type': 'application/json' });
+    // private headers = new Headers({ 'Content-Type': 'application/json' });
     // update(item: Item): Promise<Item> {
     //     const url = `${this.url}/${item.id}`;
     //     return this.http

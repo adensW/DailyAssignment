@@ -18,7 +18,6 @@ var ItemService = (function () {
         this.http = http;
         // private url = 'data/todolistdata.json'
         this.url = 'api/items';
-        this.headers = new Headers({ 'Content-Type': 'application/json' });
     }
     // getItems():Promise<Item[]>{
     //     return Promise.resolve(ITEMS);
@@ -40,6 +39,7 @@ var ItemService = (function () {
     ItemService.prototype.setItem = function (item) {
         mock_items_1.ITEMS.push(item);
     };
+    // private headers = new Headers({ 'Content-Type': 'application/json' });
     // update(item: Item): Promise<Item> {
     //     const url = `${this.url}/${item.id}`;
     //     return this.http
