@@ -18,6 +18,7 @@ var stickynote_component_1 = require("./stickynote.component");
 var todolist_component_1 = require("./todolist.component");
 var left_component_1 = require("./left.component");
 var leftday_service_1 = require("./leftday.service");
+var todocomplete_component_1 = require("./todocomplete.component");
 var router_1 = require("@angular/router");
 var appRoutes = [
     { path: 'stickynote', component: stickynote_component_1.StickyNoteComponent },
@@ -47,6 +48,7 @@ AppModule = __decorate([
             todolist_component_1.TodoListComponent,
             stickynote_component_1.StickyNoteComponent,
             left_component_1.LeftComponent,
+            todocomplete_component_1.TodoCompleteComponent,
         ],
         providers: [item_service_1.ItemService, leftday_service_1.LeftDayService],
         bootstrap: [app_component_1.AppComponent],

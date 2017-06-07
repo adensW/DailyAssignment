@@ -6,17 +6,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var TodoListComponent = (function () {
-    function TodoListComponent() {
+var TodoCompleteComponent = (function () {
+    function TodoCompleteComponent() {
     }
-    return TodoListComponent;
+    return TodoCompleteComponent;
 }());
-TodoListComponent = __decorate([
+TodoCompleteComponent = __decorate([
     core_1.Component({
-        selector: 'todocpmplete',
-        templateUrl: './todolist.component.html',
+        selector: 'alert-task',
+        template: '<div>alert mission complete!</div>',
         styleUrls: ['./todolist.component.css']
     })
-], TodoListComponent);
-exports.TodoListComponent = TodoListComponent;
+], TodoCompleteComponent);
+exports.TodoCompleteComponent = TodoCompleteComponent;
 //# sourceMappingURL=todocomplete.component.js.map

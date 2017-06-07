@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 @Component({
-  selector: 'todocpmplete',
-  templateUrl:'./todolist.component.html' ,
+  selector: 'alert-task',
+  template:'<div>alert mission complete!</div>' ,
   styleUrls:['./todolist.component.css']
 })
-export class TodoListComponent {
+export class TodoCompleteComponent {
     
 }

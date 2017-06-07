@@ -11,6 +11,7 @@ import{StickyNoteComponent} from './stickynote.component';
 import{TodoListComponent} from './todolist.component';
 import{LeftComponent} from './left.component';
 import{LeftDayService} from './leftday.service';
+import{TodoCompleteComponent} from './todocomplete.component';
 
 import {RouterModule,Routes} from '@angular/router';
 const appRoutes:Routes=[
@@ -35,7 +36,7 @@ const appRoutes:Routes=[
   TodoListComponent,
   StickyNoteComponent,
   LeftComponent,
-  
+  TodoCompleteComponent,
   ],
   providers:[ItemService,LeftDayService],
   
