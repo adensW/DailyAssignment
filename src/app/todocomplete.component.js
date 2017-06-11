@@ -14,7 +14,7 @@ var TodoCompleteComponent = (function () {
 TodoCompleteComponent = __decorate([
     core_1.Component({
         selector: 'alert-task',
-        template: '<div>alert mission complete!</div>',
+        template: '<div>alert mission complete!ahh</div>',
         styleUrls: ['./todolist.component.css']
     })
 ], TodoCompleteComponent);
